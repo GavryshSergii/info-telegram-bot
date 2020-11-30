@@ -70,21 +70,25 @@ const ServiceCost = () => {
   return (
     <Box className={classes.root}>
       <Container className={classes.container}>
-        <Container maxWidth="sm" component="main" className={classes.heroContent}>
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Доступ:
-          </Typography>
-        </Container>
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          gutterBottom
+          className={classes.heroContent}
+        >
+          Доступ:
+        </Typography>
         <Grid container spacing={5} alignItems="flex-end" className={classes.containerPrising}>
           {tiers.map((tier) => (
             // Enterprise card is full width at sm breakpoint
-            <Grid item key={tier.title} sm={6} md={3} >
+            <Grid item key={tier.title} sm={6} md={3}>
               <Card className={classes.cardPrise}>
                 <CardHeader
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: 'center', variant: 'h4' }}
-                  subheaderTypographyProps={{ align: 'center', color: 'prime' }}
+                  subheaderTypographyProps={{ align: 'center', color: 'textSecondary' }}
                   action={tier.title === '12 місяців' ? <StarIcon/> : null}
                 />
                 <CardContent>

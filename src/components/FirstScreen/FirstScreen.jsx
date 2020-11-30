@@ -7,9 +7,6 @@ import Typography from '@material-ui/core/Typography';
 // import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100vw',
-  },
   banner: {
     width: '100%',
     objectFit: 'cover',
@@ -49,7 +46,9 @@ const FirstScreen = () => {
 
   return (
     <Box className={classes.root}>
-      <img src='images/фон.jpg' className={classes.banner} alt=''/>
+      <img src='images/фон.jpg' className={classes.banner} alt=''
+           // width={ document.documentElement.clientWidth }
+      />
       <Box className={classes.row}>
         <Container className={classes.container}>
           {/*<Slide direction='up' >*/}
